@@ -48,6 +48,16 @@ namespace TestSortingAlgorithms
         [DataRow(10_000)]
         [DataRow(100_000)]
         [DataRow(1_000_000)]
+        public void TestQuickSort(int count)
+        {
+            TestAlgorithm(count, Sort.QuickSort);
+        }
+
+        [TestMethod]
+        [DataRow(1_000)]
+        [DataRow(10_000)]
+        [DataRow(100_000)]
+        [DataRow(1_000_000)]
         public void TestMergeSort(int count)
         {
             int[] arr = GetRandomArray(count);
